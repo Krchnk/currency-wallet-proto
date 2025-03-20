@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package exchangerates;
 
-option go_package = "github.com/Krchnk/currency-wallet-proto/exchangerates";
+option go_package = "/exchangerates";
 
 service ExchangeRatesService {
   rpc GetExchangeRates(GetExchangeRatesRequest) returns (GetExchangeRatesResponse) {}
