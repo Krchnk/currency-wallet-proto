@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package exchangerates;
+
+option go_package = "github.com/Krchnk/currency-wallet-proto/exchangerates";
+
+service ExchangeRatesService {
+  rpc GetExchangeRates(GetExchangeRatesRequest) returns (GetExchangeRatesResponse) {}
+}
+
+message GetExchangeRatesRequest {
+  // Можно добавить фильтры, если нужно (например, конкретные валюты)
+}
+
+message ExchangeRate {
+  string from_currency = 1;
+  string to_currency = 2;
+  double rate = 3;
+}
+
+message GetExchangeRatesResponse {
+  repeated ExchangeRate rates = 1;
+}
